@@ -6,7 +6,6 @@ let tariffPlanApple = 123.965;
 let moneyPay = 500;
 //let moneyPay = +prompt("Введіть суму оплати", 500);
 
-
 const maxTariffPlan = Math.max(tariffPlanYahoo, tariffPlanGoogle, tariffPlanApple);
 console.log(maxTariffPlan);
 
@@ -59,24 +58,3 @@ const resultInfo = `
 `;
 
 console.log(resultInfo);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
