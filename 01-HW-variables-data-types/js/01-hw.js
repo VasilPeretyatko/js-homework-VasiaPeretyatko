@@ -29,13 +29,6 @@ console.log(tariffPlanChangeMoney);
 const tariffPlanAverage = Number((sumTariffPlan / 3).toFixed(2));
 console.log(tariffPlanAverage);
 
-//Вариант 1 (мой)
-// const discountRandom = Number(Math.random().toFixed(2));
-// const discountPercent = `${Math.trunc(discountRandom * 100)} %`;
-// console.log(discountRandom);
-// console.log(discountPercent);
-
-//Вариант 2 (супорта)
 const max = 99;
 const min = 1;
 const discountRandom = Math.floor((Math.random() * (max - min + 1)) + min) / 100;
