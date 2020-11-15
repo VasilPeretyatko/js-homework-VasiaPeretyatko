@@ -32,7 +32,8 @@ const sumTariffPlanRoundToHundredths =
   Math.round(
     (Math.floor(tariffPlanYahoo) +
       Math.floor(tariffPlanGoogle) +
-      Math.floor(tariffPlanApple)) /100
+      Math.floor(tariffPlanApple)) /
+      100
   ) * 100;
 console.log(sumTariffPlanRoundToHundredths);
 
@@ -56,7 +57,6 @@ console.log(discountPercent);
 const tariffPlanWithDiscount = Number(
   (sumTariffPlan - sumTariffPlan * discountRandom).toFixed(2)
 );
-// eslint-disable-next-line no-console
 console.log(tariffPlanWithDiscount);
 
 const netProfit = Number(
