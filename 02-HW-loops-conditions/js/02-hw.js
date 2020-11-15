@@ -1,39 +1,45 @@
 //Code was Formatted by Prettier
-//Мой вариант
-let userNumberN = Math.round(+prompt("Введіть ваше число (one)", 0));
-let userNumberM = Math.round(+prompt("Введіть ваше число (two)", 0));
+// Варіант 2
+
+let userNumberN = "";
+let userNumberM = "";
 let sumTotal = 0;
 let qust = null;
 let isWithEven = null;
 
-while (userNumberM <= userNumberN) {
-  alert("Введіть друге число більше за перше");
-  userNumberN = +prompt("Введіть ваше число (N)", 0);
-  userNumberM = +prompt("Введіть ваше число (M)", 0);
-  qust = confirm("Пропускати парні числа");
-  isWithEven = qust ? "без врахування парних" : "разом з парними";
-}
+do {
+  userNumberN = Math.round(+prompt("Введіть ваше число (one)", 0));
+  userNumberM = Math.round(+prompt("Введіть ваше число (two)", 0));
 
-while (Number.isNaN(userNumberN && userNumberM)) {
-  alert("Потрібно ввести число");
-  const isUserContinue = confirm("Ви хочeте повторити спробу?");
-  if (isUserContinue === false) {
-    alert("Good Luck");
-    break;
+  if (userNumberM <= userNumberN) {
+    alert("Введіть друге число (two) більше за перше (one)");
+  } else if (userNumberM > userNumberN) {
+    qust = confirm("Пропускати парні числа");
+    isWithEven = qust
+      ? "без врахування парних чисел"
+      : "разом з парними числами";
   } else {
-    userNumberN = +prompt("Введіть ваше число (N)", 0);
-    userNumberM = +prompt("Введіть ваше число (M)", 0);
+    alert("Потрібно ввести число");
+    const isUserContinue = confirm("Ви хочeте повторити спробу?");
+    if (isUserContinue === false) {
+      alert("Good Luck");
+      break;
+    }
   }
-}
 
-for (let i = userNumberN; i <= userNumberM; i++) {
-  if (qust) {
-    if (i % 2 == 0) continue;
-    sumTotal += i;
-  } else {
-    sumTotal += i;
+  for (let i = userNumberN; i <= userNumberM; i++) {
+    if (qust) {
+      if (i % 2 == 0) continue;
+      sumTotal += i;
+    } else {
+      sumTotal += i;
+    }
   }
-}
+} while (
+  !Number.isFinite(userNumberN) ||
+  !Number.isFinite(userNumberM) ||
+  userNumberM <= userNumberN
+);
 
 console.log(`
 Перше число: ${userNumberN}
