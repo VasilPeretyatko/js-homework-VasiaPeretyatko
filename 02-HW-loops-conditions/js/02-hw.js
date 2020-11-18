@@ -8,9 +8,20 @@ let isWithEven = null;
 
 do {
   userNumberRandomFirst = Math.round(+prompt("Введіть ваше число (First)", 0));
+  while (!userNumberRandomFirst) {
+    userNumberRandomFirst = Math.round(
+      +prompt("Ну це не число, Давай зберися і введи число (First)", 0)
+    );
+  }
+
   userNumberRandomSecond = Math.round(
-    +prompt("Введіть ваше число (Second)", 0)
+    +prompt("Введіть ваше число (Second)", 10)
   );
+  while (!userNumberRandomSecond) {
+    userNumberRandomSecond = Math.round(
+      +prompt("Ну це не число, Давай зберися і введи число (Second)", 10)
+    );
+  }
 
   if (userNumberRandomSecond <= userNumberRandomFirst) {
     alert("Введіть друге число (Second) більше за перше (First)");
@@ -22,7 +33,7 @@ do {
 
     for (let i = userNumberRandomFirst; i <= userNumberRandomSecond; i++) {
       if (questionWithEven) {
-        if (i % 2 == 0) continue;
+        if (i % 2 === 0) continue;
         sumTotal += i;
       } else {
         sumTotal += i;
@@ -31,14 +42,14 @@ do {
   } else {
     alert("Потрібно ввести число");
     const isUserContinue = confirm("Ви хочeте повторити спробу?");
-    if (isUserContinue === false) {
+    if (!isUserContinue) {
       alert("Good Luck");
       break;
     }
   }
 } while (
-  !Number.isFinite(userNumberRandomFirst) ||
-  !Number.isFinite(userNumberRandomSecond) ||
+  !Number.isInteger(userNumberRandomFirst) ||
+  !Number.isInteger(userNumberRandomSecond) ||
   userNumberRandomSecond <= userNumberRandomFirst
 );
 
