@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Kindness';
+    src: url('../fonts/kindness/FontOfKindness-Regular.otf');
+    src: local('Kindness Regular'), local('Kindness-Regular'),
+        url('../fonts/kindness/FontOfKindness-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/kindness/FontOfKindness-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kindness';
+    src: url('../fonts/kindness/FontOfKindness-Bold.otf');
+    src: local('Kindness Bold'), local('Kindness-Boldr'),
+        url('../fonts/kindness/FontOfKindness-Bolt.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/kindness/FontOfKindness-Bold.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+

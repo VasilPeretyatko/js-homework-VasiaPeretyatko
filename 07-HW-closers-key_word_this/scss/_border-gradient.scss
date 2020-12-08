@@ -1,0 +1,13 @@
+.border-gradient::before {
+        content: '';
+        position: absolute;
+        top: 15px;
+        bottom: 15px;
+        left: 20px;
+        right: 20px;
+        z-index: 2;
+        border: 5px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(to right, red, purple);
+        border-radius: 1em;
+}

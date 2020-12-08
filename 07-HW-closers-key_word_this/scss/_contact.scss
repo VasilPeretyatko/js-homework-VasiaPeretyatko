@@ -1,0 +1,32 @@
+.contact {
+    position: relative;
+    height: 100vh;
+    background-color: #353b48;
+    padding: 40px 0;
+
+    // Устранение смещения из-за фиксированного блока (шапка, меню).
+        border-top: 50px solid transparent;
+        margin-top: -50px;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+
+    &__container{
+        position: relative;
+        z-index: 3;
+    }
+
+    &__title {
+        display: inline-block;
+        font-size: 3em;
+        font-weight: 700;
+        color: cyan;
+        background: #880EE5;
+        background: -moz-linear-gradient(left, #880EE5 0%, #B7288F 42%, #B63628 100%);
+        background: -webkit-linear-gradient(left, #880EE5 0%, #B7288F 42%, #B63628 100%);
+        background: linear-gradient(to right, #880EE5 0%, #B7288F 42%, #B63628 100%);
+        border-radius: 5px;
+        padding: 0 10px;
+        cursor: text;
+    }
+}

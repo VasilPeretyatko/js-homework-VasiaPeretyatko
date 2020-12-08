@@ -1,0 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: calc(100vh-50px);
+    background-color: whitesmoke;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container-wrap {
+    padding: 0 50px;
+}
